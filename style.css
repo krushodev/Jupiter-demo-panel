@@ -5,6 +5,8 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Header */
+
 header {
   background-color: #0e69f8;
   display: flex;
@@ -82,4 +84,281 @@ header div:last-child {
 header div:last-child img {
   max-width: 900px;
   height: auto;
+}
+
+/* Demos */
+
+#demos-section {
+  margin-top: 20em;
+}
+
+#demos-section > div:first-child {
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+#demos-section > div:first-child h3 {
+  font-size: 3em;
+  text-align: center;
+}
+
+#demos-section > div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  gap: 2.4em;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#demos-section > div:nth-child(2) > div {
+  width: 20%;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+}
+
+#demos-section > div:nth-child(2) > div > div {
+  height: 750px;
+  border-radius: 8px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#demos-section > div:nth-child(2) > div:first-child > div {
+  background-image: url('./assets/images/home1.png');
+}
+
+#demos-section > div:nth-child(2) > div:nth-child(2) > div {
+  background-image: url('./assets/images/home2.png');
+}
+
+#demos-section > div:nth-child(2) > div:nth-child(3) > div {
+  background-image: url('./assets/images/home3.png');
+}
+
+#demos-section > div:nth-child(2) > div > div button {
+  font-size: 1em;
+  background-color: rgb(26, 63, 157);
+  border: none;
+  padding: 20px 50px;
+  border-radius: 5px;
+  visibility: hidden;
+}
+
+#demos-section > div:nth-child(2) > div:hover > div button {
+  visibility: visible;
+}
+
+#demos-section > div:nth-child(2) > div > div button a {
+  color: white;
+  text-decoration: none;
+}
+#demos-section > div:nth-child(2) > div > span {
+  width: 100%;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+/* Blogs */
+
+#blogs-section {
+  margin-top: 20em;
+}
+
+#blogs-section > div:first-child {
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+#blogs-section > div:first-child h3 {
+  font-size: 3em;
+  text-align: center;
+}
+
+#blogs-section > div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  gap: 2.4em;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#blogs-section > div:nth-child(2) > div {
+  width: 25%;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+}
+
+#blogs-section > div:nth-child(2) > div > div {
+  height: 1000px;
+  border-radius: 8px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#blogs-section > div:nth-child(2) > div:first-child > div {
+  background-image: url('./assets/images/blog.jpg');
+}
+
+#blogs-section > div:nth-child(2) > div:nth-child(2) > div {
+  background-image: url('./assets/images/single.jpg');
+}
+
+#blogs-section > div:nth-child(2) > div > div button {
+  font-size: 1em;
+  background-color: rgb(26, 63, 157);
+  border: none;
+  padding: 20px 50px;
+  border-radius: 5px;
+  visibility: hidden;
+}
+
+#blogs-section > div:nth-child(2) > div:hover > div button {
+  visibility: visible;
+}
+
+#blogs-section > div:nth-child(2) > div > div button a {
+  color: white;
+  text-decoration: none;
+}
+#blogs-section > div:nth-child(2) > div > span {
+  width: 100%;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+/* Widgets */
+
+#widgets-section {
+  margin-top: 20em;
+  background-color: #0e69f8;
+  padding: 10em 0;
+}
+
+#widgets-section > div:first-child {
+  text-align: center;
+  margin-bottom: 4em;
+}
+
+#widgets-section > div:first-child h3 {
+  font-size: 3em;
+  text-align: center;
+  color: white;
+}
+
+#widgets-section > div:nth-child(2) {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+  width: 60%;
+  margin: 0 auto;
+}
+
+#widgets-section > div:nth-child(2) > div img {
+  width: 100%;
+}
+
+/* Features */
+
+#features-section {
+  margin-top: 10em;
+}
+
+#features-section > div:first-child {
+  text-align: center;
+  margin-bottom: 4em;
+}
+
+#features-section > div:first-child h3 {
+  font-size: 3em;
+  text-align: center;
+}
+
+#features-section > div:nth-child(2) {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2em;
+  width: 60%;
+  margin: 0 auto;
+}
+
+#features-section > div:nth-child(2) > div {
+  background-color: gray;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+}
+
+#features-section > div:nth-child(2) > div h5 {
+  font-size: 1.4em;
+}
+
+#features-section > div:nth-child(2) > div p {
+  font-size: 1.3em;
+  text-align: center;
+}
+
+/* Footer */
+
+footer {
+  margin-top: 20em;
+  background-color: #0e69f8;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer > div:first-child {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 5em;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer > div:first-child h3 {
+  font-size: 3em;
+  text-align: center;
+  color: white;
+  max-width: 90%;
+}
+
+footer > div > button {
+  font-size: 1em;
+  background-color: rgb(26, 63, 157);
+  border: none;
+  padding: 20px 50px;
+  border-radius: 5px;
+}
+
+footer > div button a {
+  color: white;
+  text-decoration: none;
+}
+
+#swoosh-up {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  z-index: 50;
 }
