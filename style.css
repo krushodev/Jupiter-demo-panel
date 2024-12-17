@@ -1,8 +1,46 @@
 * {
   margin: 0;
   padding: 0;
-  line-height: 1.5;
+  line-height: 1.2;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+.section-icon-container {
+  background-color: #8a19fa;
+  display: inline-block;
+  padding: 28px;
+  border-radius: 50%;
+  margin: 2em 1.1em;
+  box-shadow: 0 0 30px -2px #8a19fa;
+  -webkit-box-shadow: 0 0 30px -2px #8a19fa;
+}
+
+.section-icon {
+  width: 25px; /* Tamaño del ícono */
+  height: 25px;
+  background-color: white; /* Fondo morado */
+  -webkit-mask: url('assets/icons/anchor.svg') no-repeat center;
+  mask: url('assets/icons/anchor.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+.bulb-white {
+  background-color: white;
+}
+
+.bulb-white .section-icon {
+  background-color: #8a19fa;
+}
+
+.bulb .section-icon {
+  -webkit-mask: url('assets/icons/bulb-alt.svg') no-repeat center;
+  mask: url('assets/icons/bulb-alt.svg') no-repeat center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
 }
 
 /* Header */
@@ -22,20 +60,25 @@ header div:first-child {
   justify-content: space-between;
   padding: 1em 0;
   width: 60%;
-  margin: 0 auto;
+  margin: 0 auto 4em;
 }
 
 header div:first-child h1 {
-  font-size: 1.3em;
+  font-size: 1.25em;
   color: white;
 }
 
 header div:first-child button {
   font-size: 1em;
-  background-color: rgb(26, 63, 157);
+  background-color: #1a3f9d;
   border: none;
-  padding: 20px 50px;
+  padding: 25px 50px;
   border-radius: 5px;
+}
+
+header div:first-child button:hover {
+  background-color: white;
+  transition: 0.5s;
 }
 
 header div:first-child button a {
@@ -43,17 +86,21 @@ header div:first-child button a {
   text-decoration: none;
 }
 
+header div:first-child button:hover a {
+  color: #1a3f9d;
+}
+
 header div:nth-child(2) {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 4em;
   height: 20em;
   align-items: center;
   justify-content: space-evenly;
 }
 
 header div:nth-child(2) h2 {
-  font-size: 4.2em;
+  font-size: 4.5em;
   max-width: 50%;
   color: white;
   text-align: center;
@@ -61,10 +108,15 @@ header div:nth-child(2) h2 {
 
 header div:nth-child(2) button {
   font-size: 1em;
-  background-color: rgb(26, 63, 157);
+  background-color: #1a3f9d;
   border: none;
-  padding: 20px 50px;
+  padding: 25px 50px;
   border-radius: 5px;
+}
+
+header div:nth-child(2) button:hover {
+  background-color: white;
+  transition: 0.5s;
 }
 
 header div:nth-child(2) button a {
@@ -72,24 +124,28 @@ header div:nth-child(2) button a {
   text-decoration: none;
 }
 
+header div:nth-child(2) button:hover a {
+  color: #1a3f9d;
+}
+
 header div:last-child {
   display: flex;
   justify-content: center;
   position: absolute;
-  bottom: -30%;
+  bottom: -45%;
   left: 50%;
   transform: translate(-50%);
 }
 
 header div:last-child img {
-  max-width: 900px;
+  max-width: 1100px;
   height: auto;
 }
 
 /* Demos */
 
 #demos-section {
-  margin-top: 20em;
+  margin-top: 25em;
 }
 
 #demos-section > div:first-child {
@@ -128,6 +184,28 @@ header div:last-child img {
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: rgb(0, 0, 0);
+  position: relative;
+}
+
+#demos-section > div:nth-child(2) > div > div > div {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  filter: opacity(0.3);
+  position: absolute;
+  visibility: hidden;
+  z-index: 1;
+}
+
+#demos-section > div:nth-child(2) > div > div:hover {
+  transform: translateY(-5px);
+  transition: 0.4s;
+}
+
+#demos-section > div:nth-child(2) > div > div:hover > div {
+  visibility: visible;
+  transition: 0.6s;
 }
 
 #demos-section > div:nth-child(2) > div:first-child > div {
@@ -149,16 +227,29 @@ header div:last-child img {
   padding: 20px 50px;
   border-radius: 5px;
   visibility: hidden;
+  position: absolute;
+  z-index: 2;
 }
 
 #demos-section > div:nth-child(2) > div:hover > div button {
   visibility: visible;
+  transition: 0.7s;
+}
+
+#demos-section > div:nth-child(2) > div:hover > div button:hover {
+  background-color: white;
+  transition: 0.7s;
 }
 
 #demos-section > div:nth-child(2) > div > div button a {
   color: white;
   text-decoration: none;
 }
+
+#demos-section > div:nth-child(2) > div > div button:hover a {
+  color: #1a3f9d;
+}
+
 #demos-section > div:nth-child(2) > div > span {
   width: 100%;
   font-size: 1.3em;
@@ -168,7 +259,7 @@ header div:last-child img {
 /* Blogs */
 
 #blogs-section {
-  margin-top: 20em;
+  margin-top: 10em;
 }
 
 #blogs-section > div:first-child {
@@ -207,6 +298,27 @@ header div:last-child img {
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+}
+
+#blogs-section > div:nth-child(2) > div > div > div {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  filter: opacity(0.3);
+  position: absolute;
+  visibility: hidden;
+  z-index: 1;
+}
+
+#blogs-section > div:nth-child(2) > div > div:hover > div {
+  visibility: visible;
+  transition: 0.6s;
+}
+
+#blogs-section > div:nth-child(2) > div > div:hover {
+  transform: translateY(-8px);
+  transition: 0.4s;
 }
 
 #blogs-section > div:nth-child(2) > div:first-child > div {
@@ -224,10 +336,21 @@ header div:last-child img {
   padding: 20px 50px;
   border-radius: 5px;
   visibility: hidden;
+  position: absolute;
+  z-index: 2;
 }
 
 #blogs-section > div:nth-child(2) > div:hover > div button {
   visibility: visible;
+}
+
+#blogs-section > div:nth-child(2) > div > div button:hover {
+  background-color: white;
+  transition: 0.6s;
+}
+
+#blogs-section > div:nth-child(2) > div > div button:hover a {
+  color: #1a3f9d;
 }
 
 #blogs-section > div:nth-child(2) > div > div button a {
@@ -243,9 +366,9 @@ header div:last-child img {
 /* Widgets */
 
 #widgets-section {
-  margin-top: 20em;
+  margin-top: 6em;
   background-color: #0e69f8;
-  padding: 10em 0;
+  padding: 8em 0;
 }
 
 #widgets-section > div:first-child {
@@ -342,10 +465,15 @@ footer > div:first-child h3 {
 
 footer > div > button {
   font-size: 1em;
-  background-color: rgb(26, 63, 157);
+  background-color: #1a3f9d;
   border: none;
   padding: 20px 50px;
   border-radius: 5px;
+}
+
+footer > div > button:hover {
+  background-color: white;
+  transition: 0.6s;
 }
 
 footer > div button a {
@@ -353,12 +481,31 @@ footer > div button a {
   text-decoration: none;
 }
 
+footer > div button:hover a {
+  color: #1a3f9d;
+}
+
 #swoosh-up {
   position: fixed;
-  right: 20px;
-  bottom: 20px;
+  right: 30px;
+  bottom: 30px;
   width: 50px;
   height: 50px;
-  background-color: red;
+  border-radius: 50%;
+  background-color: #0f58fb;
   z-index: 50;
+  cursor: pointer;
+}
+#swoosh-up:hover {
+  background-color: #33c4e4;
+  transition: 0.6s;
+}
+
+#swoosh-up a img {
+  width: 45%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: invert(100%) brightness(100%);
 }
